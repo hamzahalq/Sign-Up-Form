@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+  scrollbar-color: #ff4233 #f0f0f0;
+}
+
+.container{
+  @apply grid grid-cols-2 gap-4 border border-gray-200 rounded-lg p-4 m-3 mt-0;
+}
+
+.input-style {
+  @apply w-full  bg-gray-100 rounded-2xl text-sm text-gray-400 h-10 p-4 focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+.error-text {
+  @apply text-red-500 text-sm font-urbanist;
+}
+
+.input-title {
+  @apply text-base font-urbanist text-secondary;
+}
+
+.input-block {
+  @apply pl-0;
+}
+
+.file-style {
+  @apply row-span-2 p-4 border w-full rounded-xl bg-gray-100 text-sm font-urbanist text-secondary ;
+}
+
+.choose-file-style {
+  @apply text-lg font-urbanist text-secondary;
+}
+
+.add-button-style {
+  @apply items-center justify-center bg-primary rounded-full w-12 h-12 text-2xl p-2;
+}
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 715px) { */
+  /* .container {
+    grid-template-columns: 1fr;
+  }
+  .item-1 {
+    grid-template-columns: 1fr;
+  } */
+/* } */
