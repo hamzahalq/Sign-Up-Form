@@ -1,4 +1,16 @@
-const Section = ({columnTile ='', columnDescription ='', gridClassName ='', titleClassName ='', img ='', children}) => { 
+import React, { ReactNode } from "react";
+
+
+type SectionProps = {
+    columnTile?: string;
+    columnDescription?: string;
+    gridClassName?: string;
+    titleClassName?: string;
+    img?: string;
+    children?: ReactNode;
+};
+
+const Section: React.FC<SectionProps> = ({columnTile ='', columnDescription ='', gridClassName ='', titleClassName ='', img ='', children}) => { 
     return (
         <div className={gridClassName}>
 

@@ -1,6 +1,21 @@
+import React, { ReactNode, useRef, useState } from "react";
 import Modal from "./Modal";
-import { useState, useRef } from "react";
-const File = ({fileText = '', id ='', isError = '', setFieldValue, children }) => {
+import {FormikErrors} from "formik";
+
+type SetFieldValueFn = (
+    field: string,
+    value: any,
+    shouldValidate?: boolean
+) => void | Promise<void> | Promise<FormikErrors<any>>;
+
+type FileProps = {
+    fileText?: string;
+    id?: string;
+    isError?: string;
+    setFieldValue: SetFieldValueFn;
+    children?: ReactNode;
+};
+const File: React.FC<FileProps> = ({fileText = '', id ='', isError = '', setFieldValue, children }) => {
     const [open, setOpen] = useState(false);
     const [file, setFile] = useState<File | null>(null);
     const [isUploaded, setIsUploaded] = useState(false);
